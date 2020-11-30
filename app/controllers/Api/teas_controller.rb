@@ -6,7 +6,7 @@ class Api::TeasController < ApplicationController
 
   def create
     tea = Tea.new(tea_params)
-    if tea.save
+    if tea.sav
       render json: tea
     else
       render json: tea.errors.full_messages, status: 422
